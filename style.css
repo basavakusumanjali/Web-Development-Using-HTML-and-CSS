@@ -1,0 +1,739 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Top of the page i.e header*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, rgb(124, 11, 11),rgb(69, 3, 175),  rgb(124, 11, 11) );
+    
+}
+
+.header-left, .header-right {
+    flex: 0 0 auto;
+   
+}
+
+.header-center {
+    text-align: center;
+    flex: 1 1 auto;
+    color:white;
+     font-family: italic;
+    font-weight: bold;
+    
+}
+.logo {
+    max-height: 110px;
+}
+
+.header-center h1 {
+    margin: 0;
+    font-size:40px;
+    text-align:center;
+  
+}
+
+.header-center p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    color:white;
+    font-size:20px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left, .header-right {
+        margin-bottom: 10px;
+    
+    }
+    .logo {
+        max-height: 110px;
+    }
+
+   
+}
+/*End of the top header*/
+
+
+/*Navbar*/
+
+
+.scroll{
+    overflow-y: scroll;
+    height:300px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color:goldenrod;
+    
+}
+.navbar:hover{
+   
+    font-size: 15px;
+    font-style:oblique;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+  
+    background: linear-gradient(45deg, rgb(201, 138, 3),rgba(255, 255, 254, 0.986), rgb(201, 138, 3));
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    /* width: 150px; */
+    width: 10%;
+  
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    font-weight:bold;
+  
+    margin: 0;
+    /* width: 150px; */
+    width:100%;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color:white;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-style:italic;
+    background-color:rgb(228, 214, 90);
+    font-size:1 4px;
+
+    /* min-width: 160px; */
+    max-width: 200px;
+    width: fit-content;
+
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+
+    /* width: 60%; */
+}
+
+.dropdown-content a:hover {
+    background-color:white;
+    color: black;
+    /* width: 100%;  */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sub-dropdown style */
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown > a {
+    /* position: relative; */
+
+    /* width: 160px; */
+    max-width: 200px;
+    width: fill;
+
+
+}
+/* .sub-dropdown a {
+    width: 10%;
+} */
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(224, 215, 133);
+    min-width: fit-content;
+    /* sub-sub-dropdown width */
+    width: 190px;
+
+    left: 100%;
+    /* right: 100%; */
+    top: 0;
+  
+}
+
+.level-3-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(231, 222, 141);
+
+    width: 190px;
+    left: 100%;
+    top: 0;
+
+}
+
+
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+.sub-sub-dropdown:hover .level-3-dropdown-content {
+    display: block;
+}
+
+.sub-dropdown-content a:hover {
+    background-color: white;
+}
+
+            /*End of Navbar*/
+
+            /*Scroll bar*/
+            .scrolling-bar{
+                grid-area: scrolling-bar;
+                color: #dfdfdf;
+                font-size: 17px;
+                background-color: #fffeff;
+             
+            }
+    
+            marquee{
+                 background-color:rgb(8, 7, 8); 
+                padding-top:5px;
+                color: #ffffff;
+            }
+            /*End of scroll bar*/
+
+            /*Main section of the page*/
+            main {
+                display: flex;
+                flex: 1;
+            }
+            
+            main section {
+                padding: 1em;
+            }
+
+            
+            /*starting of the left part*/  
+
+   .left {
+                flex: 1;
+                background-color: rgb(184, 117, 41);
+                width: 157px;
+                max-height: 490px; 
+                overflow-y: auto;
+                border: 1px solid #ccc; 
+                padding: 10px; 
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            
+            .left .sidebar ul {
+                list-style-type: none;
+                padding: 0;
+                
+            }
+            
+            .left .sidebar ul li {
+                margin: 0.5em 0;
+            }
+            
+            .left .sidebar ul li a {
+                transition: transform 0.3s;
+                text-decoration: none;
+                color: #050505;
+                padding: 0.5em;
+                display: block;
+                background-color: #faf9f7;
+                border-radius: 5px; 
+            }
+            
+            .left .sidebar ul li a:hover {
+                
+                    background-color: #ffc107; 
+                    color: #333; 
+                    font-weight: bold; 
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+                    transform: scale(1.1); 
+                    transition: transform 0.3s ease;
+                    border: 1px solid #333; 
+                    width: 450px;
+               
+            }
+
+            /*Ending of the left part*/
+            
+
+            /*starting of middile part*/
+            
+            .middle {
+                flex: 2;
+                background-image: url('tank.jpeg'); 
+                background-repeat: no-repeat;
+                background-size:1200px;
+                background-position: bottom;
+                color: black;
+                position: relative;
+               text-align:center;
+               text-align:center;
+               overflow-y: auto;
+               height:480px;
+             }
+            
+           
+            .middle h2 {
+                text-align:center;
+                color: white;
+                margin-bottom: 1em;
+               position:sticky;
+                border-radius: 10px;
+           }
+
+            
+            .shiny-text {
+                position: relative;
+                display: inline-block;
+                font-size: 2em;
+                color: #fff;
+                background: linear-gradient(90deg, rgb(227, 64, 64), #05699b, rgb(191, 196, 28));
+                background-size: 1000px;
+                animation: shine 3s linear infinite;
+            }
+
+            .card{
+                background-color:bisque;
+                border-radius:40px;
+               
+               
+            }
+                
+            .block {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 300px;
+                margin: 20px;
+                overflow: hidden;
+                
+                
+                }
+                
+                .image img {
+                    width: 100%;
+                    height: auto;
+                }
+                
+                .info {
+                    padding: 20px;
+               
+                    
+                }
+                
+                .h2 {
+                    margin-top: 0;
+                    font-size: 20px;
+                }
+                
+                .p {
+                    margin: 5px 0;
+                    font-size: 16px;
+                }
+                
+       
+
+        @keyframes shine {
+                0% {
+                    background-position: 500% 0;
+                }
+                100% {
+                    background-position: -200% 0;
+                }
+            }
+            
+            #daily-info {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                position: relative;
+                z-index: 2;
+               
+                
+            }
+            
+            .info-block {
+                background-color: bisque;
+                color:black;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                text-align:center;
+                background-position: bottom;
+                padding: 0.1em;
+                border: 2px solid #000000;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 10px;
+          
+                
+            }
+
+            .info-block:hover {
+                background-color:  rgb(236, 185, 54);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+              
+            }
+        
+           .info-block ul li {
+               
+                    margin:10px;
+                    color: rgb(8, 7, 7);
+            }
+            
+            .scrolling-text-container {
+              overflow: hidden;
+                height: 480px; 
+                position: relative;
+                padding:80px;
+               }
+        
+            .scrolling-text {
+                animation: scroll 50s linear infinite;
+            }
+        
+            @keyframes scroll {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-100%); }
+            }
+        
+            /* Pause animation on hover */
+            .scrolling-text-container:hover .scrolling-text {
+                animation-play-state: paused;
+            }
+
+          /*End of middle part*/
+          /*Starting of right part */
+                
+        .right {
+                flex: 1;
+                background-color: black;
+                width: 100px;
+                border: 1px solid #ccc; 
+                padding: 10px; 
+            }
+            
+           /*Retirement card*/
+            .retiring-employees {
+                background-color:rgb(102, 7, 89);
+                background-image: url('re.jpeg');
+                background-position: bottom;
+                background-repeat: no-repeat;
+                background-origin: content-box;
+                background-size: 100%;
+                padding: 1em;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-decoration:double;
+            }
+            
+            .retiring-employees h2 {
+                margin-bottom: 1em;
+                text-align: center;
+                color: #fff;
+                text-decoration: underline;
+            }
+            
+            .employee-card {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1em;
+                padding: 1em;
+                background-color: #681919;
+                border: 1px solid rgb(9, 8, 8);
+                border-radius: 5px;
+                max-height:515.10; 
+                overflow-y: auto;
+                border: 1px solid #ccc; 
+                padding: 10px;
+            }
+            
+            .employee-card img {
+                width: 50px;
+                height: 50px;
+                margin-right: 1em;
+                border-radius: 50%;
+             }
+            
+            .employee-info h3 {
+                margin: 0;
+                font-size: 1.2em;
+             }
+            
+            .employee-info p {
+                margin: 0;
+                color: rgb(255, 255, 255);
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            
+            .header {
+                background-color: rgb(248, 243, 251);
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+            }
+            .content {
+                margin-right: 320px; 
+                padding: 20px;
+                background-color: #fff;
+                box-sizing: border-box; 
+            }
+            .employee-card {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1em;
+                padding: 1em;
+                background-color: #f9f9f9;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            
+            .employee-card img {
+                width: 50px;
+                height: 50px;
+                margin-right: 1em;
+                border-radius: 50%;
+            }
+            
+            .employee-info h3 {
+                margin: 0;
+                font-size: 1.2em;
+            }
+            
+            .employee-info p {
+                margin: 0;
+                color: #555;
+            }
+            .scroll-text-container {
+                height: 390px; 
+                overflow: hidden;
+            }
+            .scroll-text {
+                animation: scroll 50s linear infinite;
+                background: linear-gradient(to bottom, rgb(253, 214, 37), #b85a13);
+            }
+            
+            @keyframes scroll {
+                0% {
+                    transform: translateY(0);
+                }
+                100% {
+                    transform: translateY(calc(-100% - 10px));
+                }
+            }
+            
+            .info-block {
+              
+                margin-bottom: 10px;
+            }
+
+           @keyframes scroll {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-100%); }
+            }
+        
+            /* Pause animation on hover */
+            .scroll-text-container:hover .scroll-text {
+                animation-play-state: paused;
+            }
+/* Add animation class */
+.employee-card:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #3e8fc5, #b6ca5b);
+    animation: falling-color 1s forwards;
+    z-index: -1;
+}
+@keyframes falling-color {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+ /*End of right part*/
+
+/*Starting of birthday card*/
+
+            .card1 {
+                width: 100%;
+                margin: 5px auto;
+                background-color: #f4f4f4;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align:center;
+            }
+            .card-heading {
+                padding: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                background-color: #0d6097;
+                color: white;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                text-align:center;
+                animation: blink 1s infinite;
+                font-style:italic;
+              }
+        @keyframes blink {
+                0%, 100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+            .card-body {
+                padding: 10px;
+                text-align:center;
+                text-align:center;
+                overflow-y: auto;
+                height:320px;
+            }
+              .row {
+                display: flex;
+                border-bottom: 1px solid rgb(221, 193, 193);
+                text-align:center;
+            
+              }
+              .header {
+                font-weight: bold;
+              }
+              
+              .column {
+                flex: 1;
+              
+                text-align: center;
+              }
+              
+              .column:nth-child(5) {
+                flex: 0.5;
+              }
+              
+              img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 50%;
+              } 
+              .logo1{
+                height:40px;
+                width:50px;
+              }
+
+            /*Ending of birthday card*/
+
+              /*starting of footer*/
+             footer {
+                background-color: #333;
+                color: #fff;
+                padding: 20px 0;
+           }
+           .footer-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 0 20px;
+                height:140px;
+                margin:0px;
+            }
+            
+            .footer-section {
+                flex: 1;
+                min-width: 200px;
+                margin: 10px;
+            }
+            .footer-section h3 {
+                border-bottom: 2px solid #555;
+                padding-bottom: 10px;
+            }
+            .footer-section p,
+            .footer-section ul {
+                margin: 10px 0;
+            }
+            .footer-section ul {
+                list-style: none;
+                padding: 0;
+            }
+            .footer-section ul li {
+                margin: 5px 0;
+            }
+            .footer-section ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+            
+            .footer-section ul li a:hover {
+                text-decoration: underline;
+            }
+          .footer-bottom {
+                text-align: center;
+                padding: px 0;
+                border-top: 1px solid #555;
+                margin-top: 10px;
+                height:20px;
+            }
+            
+            @media (max-width: 768px) {
+                .footer-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            
+                .footer-section {
+                    text-align: center;
+                }
+            }
+
+        /*End of footer*/
